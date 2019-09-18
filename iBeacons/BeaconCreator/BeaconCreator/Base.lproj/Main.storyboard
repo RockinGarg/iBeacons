@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeaconCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7F-rV-6yV">
+                                <rect key="frame" x="162" y="433" width="90" height="30"/>
+                                <state key="normal" title="Start Beacon"/>
+                                <connections>
+                                    <action selector="startRegion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afr-t9-5Ks"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSb-Ro-Jt8">
+                                <rect key="frame" x="162" y="473" width="90" height="30"/>
+                                <state key="normal" title="Stop Beacon"/>
+                                <connections>
+                                    <action selector="stopRegion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KR0-Pn-Zrb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwp-LV-6eZ">
+                                <rect key="frame" x="207" y="353" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-cX-FUb">
+                                <rect key="frame" x="207" y="393" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G8q-cX-FUb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ci-LG-gXh"/>
+                            <constraint firstItem="N7F-rV-6yV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4E6-Bd-Zfv"/>
+                            <constraint firstItem="bwp-LV-6eZ" firstAttribute="centerX" secondItem="G8q-cX-FUb" secondAttribute="centerX" id="6R7-ZF-nET"/>
+                            <constraint firstItem="YSb-Ro-Jt8" firstAttribute="width" secondItem="N7F-rV-6yV" secondAttribute="width" id="C2W-oB-Z8a"/>
+                            <constraint firstItem="N7F-rV-6yV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iyo-NO-iNO"/>
+                            <constraint firstItem="N7F-rV-6yV" firstAttribute="top" secondItem="G8q-cX-FUb" secondAttribute="bottom" constant="40" id="c7M-DI-kzo"/>
+                            <constraint firstItem="G8q-cX-FUb" firstAttribute="top" secondItem="bwp-LV-6eZ" secondAttribute="bottom" constant="40" id="fpZ-d2-AOD"/>
+                            <constraint firstItem="YSb-Ro-Jt8" firstAttribute="top" secondItem="N7F-rV-6yV" secondAttribute="bottom" constant="10" id="jfI-y5-nFL"/>
+                            <constraint firstItem="YSb-Ro-Jt8" firstAttribute="centerX" secondItem="N7F-rV-6yV" secondAttribute="centerX" id="qgv-F5-dc3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceNameLabel" destination="G8q-cX-FUb" id="QUM-71-iHv"/>
+                        <outlet property="uuidLabel" destination="bwp-LV-6eZ" id="k8O-P7-Tn4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
